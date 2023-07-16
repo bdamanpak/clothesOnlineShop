@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/bootstrap.css">
+    <link rel="stylesheet" href="./CSS/index.css">
+    <title>Login</title>
+</head>
+
+<body>
+
+    <div style="background: #FBFAFF; box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.25);">
+        <div class="container">
+            <div class="header d-flex justify-content-between pt-4 pb-4 align-items-center">
+                <div class="logo">ENDEKSHOP</div>
+                <div class="search-box d-flex justify-content-between align-items-center p-3">
+                    <span class="search">Search...</span>
+                    <svg style="max-width: 30px;" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50"
+                        height="50" viewBox="0 0 50 50">
+                        <path
+                            d="M 21 3 C 11.621094 3 4 10.621094 4 20 C 4 29.378906 11.621094 37 21 37 C 24.710938 37 28.140625 35.804688 30.9375 33.78125 L 44.09375 46.90625 L 46.90625 44.09375 L 33.90625 31.0625 C 36.460938 28.085938 38 24.222656 38 20 C 38 10.621094 30.378906 3 21 3 Z M 21 5 C 29.296875 5 36 11.703125 36 20 C 36 28.296875 29.296875 35 21 35 C 12.703125 35 6 28.296875 6 20 C 6 11.703125 12.703125 5 21 5 Z">
+                        </path>
+                    </svg>
+                </div>
+                <div class="d-flex gap-4 justify-content-between align-items-center">
+                    <div>
+                        <svg width="45" height="24" viewBox="0 0 45 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <rect x="0.354492" y="0.272339" width="44.1497" height="23.2142" fill="url(#pattern0)" />
+                            <defs>
+                                <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                    <use xlink:href="#image0_10_1318" transform="scale(0.00322581 0.00613497)" />
+                                </pattern>
+                                <image id="image0_10_1318" width="310" height="163"
+                                    xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATYAAACjCAYAAAAAYDLtAAARfElEQVR4Ae2dT4gsxR3H6/ouK8GFLAvL4rI8ckqIh2CIL5dcJDyEZQiOb9n/6iGCiSSRgJeYRBCRHEQFD56CAUEiXoxBAooREhP0ZDCYYwgSCDkkkGOF76+namt6qmd63mw/3lZ9Bnqnp6aqa+vbv/pMdf35lXNXH/Ic9Wjw+y98w79z5zc50KBoG3BzobZ9shr0Vkm/SlrBepX0q6S9zfMGbEC9hh+2brBtn/j7D572bvPo5uC2edSkvxlIkPdgmgM2wFY32NzY//Vvf/df//aPvds5Xa6i7ZxaOqV3brxcWrV4yHswzQEbYKsPbGpdbR03rTQ39nq98svfNHBSuI4uyCk8xHFjS6f0Bja1+sJ3XX165G1aDa05YANsdYFt+8Q/8vjzdowfftY/98LrBrZ/fP4ve6RU2KNPvOS/8q0fzsJt59TC9b3i6RFW6fTSdRQWrp3t+yJv0+hWaA7YAFt1YLvvgaf8f/77PwNS7s9rb7zr3cZh/tFy49Dr+66Xrqvrd4GNvPPKXbTmgA2w1QW2MJrnxv7Ntz6YqmWCkg0kLOovc2OL14ajrmePpPMGEvQdeUfdh9IcsAG2+sAmuG0e2WNRrGHe2yCCc3v5llq7z8ztWfw0vR5Fe42ukneUrRl4uXjNARtgqxNsV2743733kVWwnz33qwipL371u7N9a22o7Zx6xdNLFVPp9dL13JUbi8FI3qaZtNNrCM0BG2CrE2xr+9bxb4MEgpEbWd+ZjY529a8FwG0c2mio9Qu5kcFM19FAglvbXww28m5+AAbUHLABtirBdtc9jzVTM9L+sLV9b+G7Z/PhtHvWxEshNpnGYekDADveyTtZ6TGQ5u+5L/u33d0caFC0DeRXHuQAlgvLASoXLxeWS6uwXNxcWC59Ll4uLJe2hrzXD/xnL7/KgQbF20AebF0Vn/D5LdbbXR83sr47/qBA6QoAttsdRhf5/wG20usz5ZsoANguEhy3+7UAGxW/EgXmg01rPJfpo0orttLdrGcQXYe8l3/sXaQ5YKukWlPMbrBtHPpfvPTrZgnVsnBT/DR9Crw+52la8u4HuD6aAzZqfCUKdIPNjfzn//y3LV43zxx9gBTibB1bOqXXPLi5zixDmvSdvJspN6kmi877aA7YKqnWFHMabJqAa5NyGx9qksdWDWg5lcJ1dLWgFB7iuL24esGgpjWm+m7eBF/yth+AQTUHbNT4ShQ4B9vk8e/Djz41KIVlPaGi/eFPf/E6bEVCG267ZxYe4oQlWUqr6+izrhsfbdutD/K+NZoDtkqqNcU8B5tg40bRQWRbGnmbMG+6chjZBpM+bx3b923PHuE6jcPKOY+l5B2kiu8Xrjlgi9pyUrYC02AzuI07vHuM8r7UUsiZ66EO7x6LXB6R95SlqaVr/ZPp0rZU63C+jOaAbUpjPpSrwCzY1g+iV45QbLUceg8CuNGMs0p5+XDrB/mWXqigeifvILlpeOGaA7aoLydlKzALtslGKtZi2Dj0T/zkFVPAfKr1aD0onl4Gs41D62NrWh89NnUhbxtgGUxzwFZ2baZ0UYFpsO2emQ+w6HZIG7Ss7VvfmXX8L5pwOxkEsL44efhQ+okLHvMt1h50SFtr5N20iofUfPfM47YIt0VVui2ygYH2Y6NaavOmaqSAEvzaLbv29dL47fN2XPJe/Ai/hOYGtjvu9e9woEHBNjDdYmtDhs+LoXLJNKLFRout3hbbJaus2eknlCELZcAG2AAbcMjC4TKDFLABNsA2r7O/D/RWSb9KWv1vq6RfJe1tnjdgA2x1gy3sX6BRuj4Qa8fZOe23T0I73QQMtv8BeS+nfQ/NARtgqxtsa/u2frHXFnBtOE224bMF9OnGLu14XZ/Je/FWh23temoO2ABbfWDTI1g4JpM5n3vh9WbVQAhvV6j0c4izfuCVTi+bPR/C9Z7GT8/TOOQ9mOaADbDVBbYAFrkXciN/3wNPGZiaVQPXvdNaz0Vz2fS94rnrcaNlXcfgFlwe5eBG3rdMc8AG2OoC28ZhbGXFdQmtE218/KVr3599TNo5tXB9P+9lrb8cHMm7U7aL1hywAba6wKbHwrX9TkBFt0O5FpfSKrzD9ZA86Zoft3n9beQ9A7chNGfDZDaLrmHD7NmVBxuHtjY0rWVyEunkRTftE+s6d3vmVDJNb2tHcy219jXIO8o2iOYbh/6TZ17kQIPibWAWbGv7Xovg9ZJH3PAyt0NdrbUAKH2/fhCSxPS2qH5eay2kJ++omUS8cM3x7hFtk5OyFZgFmxubLzBzO6RW2u6ZVz+PfV7k3WPzyOIpvrXu3J59bvy59XNbpLjkPZDmgK3s2kzpogLTYJtMyrWRzNDCMtdDjVfdGa8doaUV3rdPzPuujYyGybVr+/7a/U82k3VDvNw7eVsfp/0gDKU5YIuGz0nZCkyDTcDR42SAUgqgtiui9Lv0PBcvd700TTgn7+l+zJyWQav0PRcvpzlgK7s2U7qowCzY0grD+TRoLrsegC0aPidlKwDYLjuslvn/AVvZtZnSRQUA2zJguOxxAVs0fE7KVmA+2HJ9N8tU7lXSr5JW/+Mq6VdJezvnDdjKrs2ULirQDbbtE//I488vXh/aBbqNwyb9zUCCvG+ub2+R5oAtGj4nZSvQDbbJVng29WNZOG2f2CL63tvuteFI3su3OPtoDtjKrs2ULiowDTZNwNXSJ+0U5cYWKW7Fp3AduWkEApOmaoQ4ky33dAGb06br6bt5E3zJe3jNAVs0fE7KVuAcbJNVA/LAoZn/YVmVVgJoA1+FaW9RW/fZhtvuWdx7VPEUX+n00nUUFq6bhRt53xrNAVvZtZnSRQXOwTaZ+T/P9ZC5HWrv+xkeI9cPrHLGK7dOdF1z962WXUgT3sm7pdb5xwvVfOfU//na2L9/7UEONCjaBs7BJsioJZZxPSS3Q+aHLSyzCkBqv6/tG7wUP31F9zvtll6anrxTyfxQmps/toI3ymUjaDbDlg1Mg02g2Tyy0cy0ltmi9t5ui0a2aD5Nb6Or8/rXAuDIO8o2lOY4msTRZH2OJgUYN46ucwQkbciilzmKnNfiUtqdU4un+Eo3fvhZSyv3RzaIEADW9U7e9qMypOaADbDVBzb1f20d234F1g9mo6Mj6zuzx0mNbHZBSeEbh17xNFhg+xwo/u5Zc72t42bktCs9eTfaDqw5YANsVYLNtttTX1raOgtAy3X8p6AK36cDDApb2/d23fB9miac7541cci7AdxAmgM2wFYf2ASZLvh0hQcwhfeueF3hIR15z7aG+2i2pG6ADbDVCbYUNJzPwuaSawLYABtgu+SVeG5/YKVlA2yADbBVWvlLBiJgA2yAbdFI5jzwqX9I6efFmfcdeS+vXQ/NARtgqxts6wc2deOm/ZptnzTp0xHSeSBLvyPv5aEm/Xporg2Tf+u+xoEGRdvA7MqDABg3soXsWtCeXbge4uXeN4/iQnibz5aLMy+MvIfRfPPIf/yjpznQoHgbmAab5k65sU2u1byzsILAuesxfGp+WwonPQa50STe9bhiweavhfAwNytNF87J2+bxDao53j3MpvlTvgLnYNs4NLdEWnwtB5HpQnZ91tpFvWeXVu2eWXgaL0iXXk9uj8wvW4BZeCfvW6M5YAtmyXvhCpyDTZBx407XQ4KWDQR0edOdhCte7tUss5qzGzx5z8h24ZoDthmNCShTgWmwCW5Xbphb77S4H370qbfH0UUz4e1x9LpX/PRl7sWv3FjcIU7eUbZBNAdsUV9OylZgFmzrB/ZIqmIHL7g6t763XmBrXIqn6e0RtM/oKHkPqzlgK7s2U7qowCzY3Nj61xpXQ6Poesh8qi2al7Z1HH25yWWRBhN0HfWz9XVbpLjk3bh7unDNAVs0fE7KVmAabBMPG9HtkFpoG4c2Wmdhi5xFTvYusJFQjXLao2nj9qivdw/yHlBzwFZ2baZ0UYFpsKmPTTBqA0wujNphYUSz/a54qcsjfR8g147b/kze5/2QQ2gO2KLhc1K2ArNga8OGz+ewuexaALayazOliwoAtssOq2X+f8AWDZ+TshUAbMuA4bLHBWxl12ZKFxWYD7Z2X9myFXuV9Kuk1f+5SvpV0t7OeQO2aPiclK1AN9h2Tptd37tWGiyC3PZJftf4RekmYLAd58l7uf69RZpvn/g/Pvg9DjQo3ga6wXblhs0ns42Sl23B7JzaBss2H63PioM27Mh7+RZnT83ljw23RbhtKt0GpsEmgIVj8thiqwbCzlH6TlMy2iDSZ4WHtGv7cfWCefwI4XrPpVVYGoe8bWevqMkFao6jSRxN1uVocufUX7v/SfPScdc9j/lHn3jJHsLDQmy13PR4aC24dkXbPbPw+P3Vh8xbhS6g6+h68gqi61tlbcONvE2jW6E5YANsdYFt6zjCrKtb0RZmh9ZZCqcJ6NqL39vXUcXNugsn77ZU8fNFaw7YAFtdYBOotEJg63jGO4dqmXnSlcPIdmstAE7hbmTxYq2cnFirTwMBun6I334n77Zsg2gO2ABbfWATbDaP7JExrWWNC529biilkHJ7M2C0R9A+S7LIO8o+lOaADbDVCba1ff/mWx9YBXvtjXejJ93YkZ1CrH0+GQBQYrk8Unq9dD2nAYh2/PZn8jbNgvfiITQHbICtTrC5sUEpuB2SuyFN2+h0653CaeLiu3E71OydoOsIcn3dFikueQ+nOWADbFWCTSOYOqa8ebhx94hmCradU/O+O+WUcvPIrmfXTONmzsn76LxVO5DmgA2wVQk2e1zMzTfLhWXg1DWdY+FjaLhWLp9cWIifvufi5cLSNOl5Lm4uLE0TznPxcmEhfvs9FzcX1k6nz7l4ubCrD3nABtjqAJtGKzmq0UBgK33WOeVjZYX7zo2feo46NNCmOqwVZa1sDTbgbNiSPyiAAihQkAKAraCbSVFQAAUaBQAbloACKFCcAoCtuFtKgVAABQAbNoACKFCcAoCtuFtKgVAABQAbNoACKFCcAoCtuFtKgVAABQAbNoACKFCcAoCtuFtKgVAABQAbNoACKFCcAoCtuFtKgVAABdzHP/i550ADbAAbKMkGHC5ecPGCDWADpdmAq8HpHGXEuSI2UJcNALY767rhVHDudw02ANgAm6/B0CljXUAHbIANsGEDxdkAYMOoizNqWmd1tc5y9xuwATbAhg0UZwOADaMuzqhzv+CE1dWKA2yADbBhA8XZAGDDqIszalpndbXOcvfbvXPHvZ4DDbABbKAkG3DvX3vQc6ABNoANlGQDePfAEQIKoEBxCgC24m4pBUIBFABs2AAKoEBxCgC24m4pBUIBFABs2AAKoEBxCgC24m4pBUIBFABs2AAKoEBxCgC24m4pBUIBFABs2AAKoEBxCgC24m4pBUIBFABs2AAKoEBxCgC24m4pBUIBFHCfPPOi50ADbAAbKMkG3Nvubs+BBtgANlCSDeBoEkeTOJrEBoqzAcCGURdn1DmPqoTV5VUXsAE2wIYNFGcDgA2jLs6oaZ3V1TrL3W/ABtgAGzZQnA0ANoy6OKPO/YITVlcrDrABNsCGDRRnA4ANoy7OqGmd1dU6y91vwAbYABs2UJwNsGEyG0azYTY2UJwN0GLj17q4X+vcowlhdT2e4t0DRwgogALFKQDYirulFAgFUACwYQMogALFKQDYirulFAgFUACwYQMogALFKQDYirulFAgFUACwYQMogALFKQDYirulFAgFUACwYQMogALFKQDYirulFAgFUACwYQMogALFKQDYirulFAgFUMB99vKrngMNsAFsoCQbYMNkNoxmw2xsoDgbwG0RbotwW4QNFGcDgA2jLs6o8b1Wl++13P0GbIANsGEDxdkAYMOoizPq3C84YXW14gAbYANs2EBxNgDYMOrijJrWWV2ts9z9BmyADbBhA8XZAGDDqIsz6twvOGF1teIAG2ADbNhAcTYA2DDq4oya1lldrbPc/QZsgA2wYQPF2cD/AVuzbmtQ57DQAAAAAElFTkSuQmCC" />
+                            </defs>
+                        </svg>
+                        <span>English(US)</span>
+                        <svg width="13" height="9" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.89209 1.40137L6.40558 7.18604L12.0998 1.40137" stroke="black"
+                                stroke-width="2" />
+                        </svg>
+                    </div>
+                    <svg class="bell" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50"
+                        viewBox="0 0 50 50">
+                        <path
+                            d="M 25 0 C 22.800781 0 21 1.800781 21 4 C 21 4.515625 21.101563 5.015625 21.28125 5.46875 C 15.65625 6.929688 12 11.816406 12 18 C 12 25.832031 10.078125 29.398438 8.25 31.40625 C 7.335938 32.410156 6.433594 33.019531 5.65625 33.59375 C 5.265625 33.878906 4.910156 34.164063 4.59375 34.53125 C 4.277344 34.898438 4 35.421875 4 36 C 4 37.375 4.84375 38.542969 6.03125 39.3125 C 7.21875 40.082031 8.777344 40.578125 10.65625 40.96875 C 13.09375 41.472656 16.101563 41.738281 19.40625 41.875 C 19.15625 42.539063 19 43.253906 19 44 C 19 47.300781 21.699219 50 25 50 C 28.300781 50 31 47.300781 31 44 C 31 43.25 30.847656 42.535156 30.59375 41.875 C 33.898438 41.738281 36.90625 41.472656 39.34375 40.96875 C 41.222656 40.578125 42.78125 40.082031 43.96875 39.3125 C 45.15625 38.542969 46 37.375 46 36 C 46 35.421875 45.722656 34.898438 45.40625 34.53125 C 45.089844 34.164063 44.734375 33.878906 44.34375 33.59375 C 43.566406 33.019531 42.664063 32.410156 41.75 31.40625 C 39.921875 29.398438 38 25.832031 38 18 C 38 11.820313 34.335938 6.9375 28.71875 5.46875 C 28.898438 5.015625 29 4.515625 29 4 C 29 1.800781 27.199219 0 25 0 Z M 25 2 C 26.117188 2 27 2.882813 27 4 C 27 5.117188 26.117188 6 25 6 C 23.882813 6 23 5.117188 23 4 C 23 2.882813 23.882813 2 25 2 Z M 27.34375 7.1875 C 32.675781 8.136719 36 12.257813 36 18 C 36 26.167969 38.078125 30.363281 40.25 32.75 C 41.335938 33.941406 42.433594 34.6875 43.15625 35.21875 C 43.515625 35.484375 43.785156 35.707031 43.90625 35.84375 C 44.027344 35.980469 44 35.96875 44 36 C 44 36.625 43.710938 37.082031 42.875 37.625 C 42.039063 38.167969 40.679688 38.671875 38.9375 39.03125 C 35.453125 39.753906 30.492188 40 25 40 C 19.507813 40 14.546875 39.753906 11.0625 39.03125 C 9.320313 38.671875 7.960938 38.167969 7.125 37.625 C 6.289063 37.082031 6 36.625 6 36 C 6 35.96875 5.972656 35.980469 6.09375 35.84375 C 6.214844 35.707031 6.484375 35.484375 6.84375 35.21875 C 7.566406 34.6875 8.664063 33.941406 9.75 32.75 C 11.921875 30.363281 14 26.167969 14 18 C 14 12.261719 17.328125 8.171875 22.65625 7.21875 C 23.320313 7.707031 24.121094 8 25 8 C 25.886719 8 26.679688 7.683594 27.34375 7.1875 Z M 21.5625 41.9375 C 22.683594 41.960938 23.824219 42 25 42 C 26.175781 42 27.316406 41.960938 28.4375 41.9375 C 28.792969 42.539063 29 43.25 29 44 C 29 46.222656 27.222656 48 25 48 C 22.777344 48 21 46.222656 21 44 C 21 43.242188 21.199219 42.539063 21.5625 41.9375 Z">
+                        </path>
+                    </svg>
+                    <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M20.5845 19.226C22.1545 19.226 23.4272 17.9533 23.4272 16.3833C23.4272 14.8133 22.1545 13.5405 20.5845 13.5405C19.0144 13.5405 17.7417 14.8133 17.7417 16.3833C17.7417 17.9533 19.0144 19.226 20.5845 19.226ZM20.5845 22.0688C23.7245 22.0688 26.27 19.5233 26.27 16.3833C26.27 13.2433 23.7245 10.6978 20.5845 10.6978C17.4444 10.6978 14.8989 13.2433 14.8989 16.3833C14.8989 19.5233 17.4444 22.0688 20.5845 22.0688Z"
+                            fill="#000D39" />
+                        <circle cx="20.7718" cy="20.8794" r="19.576" stroke="black" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M20.5848 22.7977C16.398 22.7977 13.004 26.1917 13.004 30.3785H9.97168C9.97168 24.517 14.7233 19.7654 20.5848 19.7654C26.4463 19.7654 31.1979 24.517 31.1979 30.3785H28.1656C28.1656 26.1917 24.7715 22.7977 20.5848 22.7977Z"
+                            fill="#000D39" />
+                    </svg>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <div style="gap: 25rem;" class="d-flex">
+            <div style="width: 50%; height: 110rem; background-image: url(./IMG/bgMain.png); background-repeat: no-repeat;"class="d-flex flex-column justify-content-center">
+                <span class="title">“1st Fashion Brand in Indonesia”</span>
+                <span class="website">fashionholic.com</span>
+            </div>
+            <div style="margin-top: 4rem;" class="d-flex flex-column align-items-center">
+                <div>
+                    <img src="./IMG/Saly-35.png" alt="">
+                    <div class="login">Login</div>
+                    <div class="input-text">Email or username</div>
+                    <div class="input-pass d-flex justify-content-between">
+                        <div>Password</div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-eye"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z" />
+                            <path
+                                d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="login-btn">LOGIN</div>
+                <div class="fp">Forgot password?</div>
+                <div class="alternativ">Or Login With</div>
+                <div class="social d-flex justify-content-between gap-3 mt-4">
+                    <svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M40.9328 24.7825C40.9328 23.577 40.8246 22.4179 40.6237 21.3052H24.6128V27.8811H33.7619C33.3678 30.0061 32.1701 31.8066 30.3696 33.012V37.2775H35.8637C39.0783 34.3179 40.9328 29.9597 40.9328 24.7825Z"
+                            fill="#4285F4" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M24.6127 41.396C29.2027 41.396 33.0509 39.8737 35.8637 37.2774L30.3696 33.0119C28.8473 34.0319 26.9 34.6346 24.6127 34.6346C20.185 34.6346 16.4373 31.6442 15.1005 27.626H9.4209V32.0305C12.2182 37.5864 17.9673 41.396 24.6127 41.396Z"
+                            fill="#34A853" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M15.1005 27.6262C14.7605 26.6062 14.5673 25.5166 14.5673 24.3962C14.5673 23.2757 14.7605 22.1862 15.1005 21.1661V16.7616H9.42098C8.26961 19.0566 7.61279 21.653 7.61279 24.3962C7.61279 27.1393 8.26961 29.7357 9.42098 32.0307L15.1005 27.6262Z"
+                            fill="#FBBC05" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M24.6127 14.1575C27.1087 14.1575 29.3496 15.0152 31.1114 16.6998L35.9873 11.8239C33.0432 9.08067 29.195 7.39612 24.6127 7.39612C17.9673 7.39612 12.2182 11.2057 9.4209 16.7616L15.1005 21.1661C16.4373 17.148 20.185 14.1575 24.6127 14.1575Z"
+                            fill="#EA4335" />
+                    </svg>
+                    <svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M21.8384 42.2849C13.3384 40.7849 6.83838 33.3849 6.83838 24.4849C6.83838 14.5849 14.9384 6.48486 24.8384 6.48486C34.7384 6.48486 42.8384 14.5849 42.8384 24.4849C42.8384 33.3849 36.3384 40.7849 27.8384 42.2849L26.8384 41.4849H22.8384L21.8384 42.2849Z"
+                            fill="url(#paint0_linear_10_1297)" />
+                        <path
+                            d="M31.8384 29.4849L32.6384 24.4849H27.8384V20.9849C27.8384 19.5849 28.3384 18.4849 30.5384 18.4849H32.8384V13.8849C31.5384 13.6849 30.1384 13.4849 28.8384 13.4849C24.7384 13.4849 21.8384 15.9849 21.8384 20.4849V24.4849H17.3384V29.4849H21.8384V42.1849C22.8384 42.3849 23.8384 42.4849 24.8384 42.4849C25.8384 42.4849 26.8384 42.3849 27.8384 42.1849V29.4849H31.8384Z"
+                            fill="white" />
+                        <defs>
+                            <linearGradient id="paint0_linear_10_1297" x1="24.8384" y1="41.2389" x2="24.8384"
+                                y2="6.48486" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#0062E0" />
+                                <stop offset="1" stop-color="#19AFFF" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <div style="margin-top: 4rem;" class="d-flex justify-content-between gap-4">
+                    <span class="havenoaccount">Don’t have an account yet?</span>
+                    <span class="signup">Sign UP</span>
+                </div>
+            </div>
+        </div>
+
+    <div class="container">
+        <div class="footer d-flex justify-content-between">
+            <div class="logo">ENDEKSHOP</div>
+            <ul class="d-flex flex-column gap-4">
+                <li class="footer-title">SERVICE</li>
+                <li class="footer-submenu"><a href="">Products</a></li>
+                <li class="footer-submenu"><a href="">Contact Us</a></li>
+            </ul>
+            <ul class="d-flex flex-column gap-4">
+                <li class="footer-title">SUPPORT</li>
+                <li class="footer-submenu>"><a href="">About fashionholic.com</a></li>
+                <li class="footer-submenu"><a href="">Privacy policy & terms</a></li>
+            </ul>
+            <ul class="d-flex flex-column gap-4">
+                <li class="footer-title">FOLLOW US ON</li>
+                <li class="footer-submenu"><a href="">Instagram</a></li>
+                <li class="footer-submenu"><a href="">Facebook</a></li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+
+</html>
